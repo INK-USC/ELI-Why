@@ -32,8 +32,8 @@ Web Retrieved: mean=0.45, std=0.12
 GPT4o Graduate School: mean=27.62, std=10.80
 GPT4o High School: mean=38.75, std=11.15
 GPT4o Elementary School: mean=47.93, std=12.38
-GPT4o Default: mean=33.72, std=12.37
-Web Retrieved: mean=49.60, std=18.69
+GPT4o Default: mean=33.73, std=12.38
+Web Retrieved: mean=49.61, std=18.69
 
 --- Linsear Write Formula ---
 GPT4o Graduate School: mean=13.26, std=2.55

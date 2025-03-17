@@ -30,7 +30,7 @@ Web Retrieved: mean=0.44, std=0.12
 
 --- Flesch Reading Ease ---
 GPT4o Graduate School: mean=34.70, std=14.43
-GPT4o High School: mean=45.50, std=14.26
+GPT4o High School: mean=45.51, std=14.26
 GPT4o Elementary School: mean=53.82, std=14.52
 GPT4o Default: mean=41.00, std=15.73
 Web Retrieved: mean=53.35, std=18.52

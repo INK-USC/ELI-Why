@@ -31,7 +31,7 @@ Web Retrieved: mean=0.44, std=0.12
 --- Flesch Reading Ease ---
 Llama3.2 Graduate School: mean=34.56, std=14.51
 Llama3.2 High School: mean=46.39, std=15.11
-Llama3.2 Elementary School: mean=60.90, std=17.14
+Llama3.2 Elementary School: mean=60.91, std=17.14
 Llama3.2 Default: mean=33.68, std=16.87
 Web Retrieved: mean=53.35, std=18.52
 
@@ -43,7 +43,7 @@ Llama3.2 Default: mean=16.43, std=3.93
 Web Retrieved: mean=11.10, std=5.21
 
 --- Dale-Chall Readability ---
-Llama3.2 Graduate School: mean=9.89, std=1.13
+Llama3.2 Graduate School: mean=9.88, std=1.13
 Llama3.2 High School: mean=9.49, std=1.19
 Llama3.2 Elementary School: mean=8.73, std=1.47
 Llama3.2 Default: mean=10.80, std=1.38

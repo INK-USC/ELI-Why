@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 import nltk
+import seaborn as sns
+from matplotlib import pyplot as plt
 
 from nltk.stem import WordNetLemmatizer
 from scipy import stats
@@ -10,7 +12,9 @@ import requests
 import json
 from statsmodels.stats.proportion import proportion_confint, proportions_ztest
 from textstat import flesch_reading_ease, linsear_write_formula, dale_chall_readability_score
-
+from tqdm import tqdm
+import itertools
+from joblib import Parallel, delayed
 
 # -- Define helper functions --
 
@@ -146,3 +150,61 @@ def compute_prop_and_ci(df, roles_list, label):
             ci_lower.append(low * 100.0)
             ci_upper.append(up * 100.0)
     return proportions, ci_lower, ci_upper
+
+
+def words_not_in_list(sentence, word_list):
+    """Return a list of lemmatized words in the sentence that are not in the given word list."""
+    words_in_sentence = nltk.word_tokenize(sentence)
+    lemmatized_words_in_sentence = [lemmatize_word(word) for word in words_in_sentence]
+    lemmatized_word_list = set([lemmatize_word(word) for word in word_list])
+    return [word for word in lemmatized_words_in_sentence if word not in lemmatized_word_list]
+
+def calculate_tesdiff(set1, set2):
+    """Compute the TESDiff score for two strings."""
+    set1_list = words_not_in_list(set1, TE_list)
+    set2_list = words_not_in_list(set2, TE_list)
+
+    return len(list(set(set1_list).difference(set(set2_list)))) / len(list(set(set1_list)))
+
+def calculate_tesdiff_batch(predictions, references):
+    """Compute the average TESDiff score over a batch of sentence pairs."""
+    tesdiff_batch = []
+    for set1, set2 in tqdm(zip(predictions, references), total=len(predictions)):
+        tesdiff_batch.append(calculate_tesdiff(set1, set2))
+    return np.mean(tesdiff_batch)
+
+def compute_tesdiff_heatmap(df, columns_to_consider, n_jobs=-1):
+    """
+    Compute a TESDiff score heatmap (as a DataFrame) for a given DataFrame and a list of columns.
+    """
+    def tesdiff_for_pair(col1, col2, df):
+        if col1 == col2:
+            return np.nan
+        predictions = df[col1].tolist()
+        references = df[col2].tolist()
+        return calculate_tesdiff_batch(predictions, references)
+    
+    pairs = list(itertools.product(columns_to_consider, repeat=2))
+    results = Parallel(n_jobs=n_jobs)(
+        delayed(tesdiff_for_pair)(c1, c2, df) for c1, c2 in pairs
+    )
+    n = len(columns_to_consider)
+    results_matrix = np.reshape(results, (n, n))
+    tesdiff_score_df = pd.DataFrame(results_matrix, index=columns_to_consider, columns=columns_to_consider)
+    tesdiff_score_df = tesdiff_score_df.apply(pd.to_numeric)
+    return tesdiff_score_df
+
+def plot_heatmap(df, title, save_path=None, show=True, cmap='viridis'):
+    """
+    Plot a heatmap for the given DataFrame.
+    Optionally save the figure to a file.
+    """
+    plt.figure(figsize=(10, 8))
+    sns.heatmap(df, annot=True, cmap=cmap, fmt=".3f")
+    plt.title(title)
+    plt.xticks(rotation=45)
+    if save_path:
+        plt.savefig(save_path)
+    if show:
+        plt.show()
+    plt.close()
