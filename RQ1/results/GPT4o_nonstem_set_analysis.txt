@@ -1,0 +1,50 @@
+=== Averages and Standard Deviations ===
+
+--- # Sentences ---
+GPT4o Graduate School: mean=9.35, std=2.51
+GPT4o High School: mean=7.85, std=2.61
+GPT4o Elementary School: mean=4.83, std=1.36
+GPT4o Default: mean=5.44, std=1.70
+Web Retrieved: mean=2.12, std=0.88
+
+--- Avg Words/Sentence ---
+GPT4o Graduate School: mean=19.25, std=2.99
+GPT4o High School: mean=18.60, std=3.01
+GPT4o Elementary School: mean=18.09, std=3.13
+GPT4o Default: mean=18.88, std=3.18
+Web Retrieved: mean=16.72, std=7.60
+
+--- Avg Reading Time (s) ---
+GPT4o Graduate School: mean=15.49, std=3.64
+GPT4o High School: mean=11.84, std=3.62
+GPT4o Elementary School: mean=6.77, std=1.69
+GPT4o Default: mean=8.53, std=2.42
+Web Retrieved: mean=2.77, std=1.20
+
+--- TE Score ---
+GPT4o Graduate School: mean=0.58, std=0.07
+GPT4o High School: mean=0.52, std=0.08
+GPT4o Elementary School: mean=0.44, std=0.09
+GPT4o Default: mean=0.53, std=0.08
+Web Retrieved: mean=0.45, std=0.12
+
+--- Flesch Reading Ease ---
+GPT4o Graduate School: mean=27.62, std=10.80
+GPT4o High School: mean=38.75, std=11.15
+GPT4o Elementary School: mean=47.93, std=12.38
+GPT4o Default: mean=33.73, std=12.38
+Web Retrieved: mean=49.61, std=18.69
+
+--- Linsear Write Formula ---
+GPT4o Graduate School: mean=13.26, std=2.55
+GPT4o High School: mean=12.19, std=2.57
+GPT4o Elementary School: mean=11.91, std=2.54
+GPT4o Default: mean=13.37, std=2.53
+Web Retrieved: mean=11.07, std=5.76
+
+--- Dale-Chall Readability ---
+GPT4o Graduate School: mean=11.09, std=0.79
+GPT4o High School: mean=10.38, std=0.83
+GPT4o Elementary School: mean=9.74, std=1.03
+GPT4o Default: mean=10.93, std=0.96
+Web Retrieved: mean=10.29, std=1.50
