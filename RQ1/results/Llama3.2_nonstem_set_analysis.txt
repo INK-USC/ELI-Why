@@ -1,0 +1,50 @@
+=== Averages and Standard Deviations ===
+
+--- # Sentences ---
+Llama3.2 Graduate School: mean=10.36, std=2.96
+Llama3.2 High School: mean=7.59, std=3.03
+Llama3.2 Elementary School: mean=3.34, std=1.70
+Llama3.2 Default: mean=4.97, std=2.98
+Web Retrieved: mean=2.12, std=0.88
+
+--- Avg Words/Sentence ---
+Llama3.2 Graduate School: mean=23.15, std=3.30
+Llama3.2 High School: mean=21.72, std=3.47
+Llama3.2 Elementary School: mean=21.10, std=4.86
+Llama3.2 Default: mean=23.55, std=4.55
+Web Retrieved: mean=16.72, std=7.60
+
+--- Avg Reading Time (s) ---
+Llama3.2 Graduate School: mean=20.10, std=5.14
+Llama3.2 High School: mean=13.05, std=4.88
+Llama3.2 Elementary School: mean=5.02, std=2.39
+Llama3.2 Default: mean=9.57, std=5.29
+Web Retrieved: mean=2.77, std=1.20
+
+--- TE Score ---
+Llama3.2 Graduate School: mean=0.56, std=0.09
+Llama3.2 High School: mean=0.49, std=0.09
+Llama3.2 Elementary School: mean=0.37, std=0.11
+Llama3.2 Default: mean=0.57, std=0.10
+Web Retrieved: mean=0.45, std=0.12
+
+--- Flesch Reading Ease ---
+Llama3.2 Graduate School: mean=27.44, std=10.55
+Llama3.2 High School: mean=38.89, std=11.53
+Llama3.2 Elementary School: mean=55.63, std=16.67
+Llama3.2 Default: mean=26.12, std=13.01
+Web Retrieved: mean=49.61, std=18.69
+
+--- Linsear Write Formula ---
+Llama3.2 Graduate School: mean=15.27, std=2.58
+Llama3.2 High School: mean=13.81, std=2.83
+Llama3.2 Elementary School: mean=13.07, std=3.69
+Llama3.2 Default: mean=16.72, std=3.67
+Web Retrieved: mean=11.07, std=5.76
+
+--- Dale-Chall Readability ---
+Llama3.2 Graduate School: mean=10.31, std=0.90
+Llama3.2 High School: mean=9.97, std=0.97
+Llama3.2 Elementary School: mean=9.03, std=1.50
+Llama3.2 Default: mean=11.31, std=1.12
+Web Retrieved: mean=10.29, std=1.50
