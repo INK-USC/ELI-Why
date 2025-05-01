@@ -26,7 +26,7 @@ Llama3.2 Graduate School: mean=0.56, std=0.09
 Llama3.2 High School: mean=0.49, std=0.09
 Llama3.2 Elementary School: mean=0.37, std=0.11
 Llama3.2 Default: mean=0.57, std=0.10
-Web Retrieved: mean=0.45, std=0.12
+Web Retrieved: mean=0.44, std=0.12
 
 --- Flesch Reading Ease ---
 Llama3.2 Graduate School: mean=27.44, std=10.55
