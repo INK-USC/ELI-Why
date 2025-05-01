@@ -1,0 +1,50 @@
+=== Averages and Standard Deviations ===
+
+--- # Sentences ---
+Qwen2.5 Graduate School: mean=4.50, std=1.17
+Qwen2.5 High School: mean=3.77, std=0.93
+Qwen2.5 Elementary School: mean=3.38, std=0.86
+Qwen2.5 Default: mean=2.97, std=0.87
+Web Retrieved: mean=2.30, std=0.90
+
+--- Avg Words/Sentence ---
+Qwen2.5 Graduate School: mean=21.73, std=3.96
+Qwen2.5 High School: mean=19.92, std=3.74
+Qwen2.5 Elementary School: mean=18.50, std=3.75
+Qwen2.5 Default: mean=21.54, std=4.49
+Web Retrieved: mean=17.26, std=6.90
+
+--- Avg Reading Time (s) ---
+Qwen2.5 Graduate School: mean=8.08, std=1.98
+Qwen2.5 High School: mean=5.93, std=1.41
+Qwen2.5 Elementary School: mean=4.60, std=1.17
+Qwen2.5 Default: mean=5.19, std=1.40
+Web Retrieved: mean=2.93, std=1.04
+
+--- TE Score ---
+Qwen2.5 Graduate School: mean=0.53, std=0.10
+Qwen2.5 High School: mean=0.47, std=0.09
+Qwen2.5 Elementary School: mean=0.38, std=0.10
+Qwen2.5 Default: mean=0.51, std=0.10
+Web Retrieved: mean=0.44, std=0.12
+
+--- Flesch Reading Ease ---
+Qwen2.5 Graduate School: mean=30.67, std=16.18
+Qwen2.5 High School: mean=42.38, std=16.05
+Qwen2.5 Elementary School: mean=57.59, std=15.19
+Qwen2.5 Default: mean=33.79, std=17.44
+Web Retrieved: mean=53.35, std=18.52
+
+--- Linsear Write Formula ---
+Qwen2.5 Graduate School: mean=15.40, std=2.94
+Qwen2.5 High School: mean=13.61, std=2.95
+Qwen2.5 Elementary School: mean=11.46, std=3.02
+Qwen2.5 Default: mean=15.44, std=3.49
+Web Retrieved: mean=11.10, std=5.21
+
+--- Dale-Chall Readability ---
+Qwen2.5 Graduate School: mean=10.91, std=1.27
+Qwen2.5 High School: mean=10.32, std=1.32
+Qwen2.5 Elementary School: mean=9.01, std=1.32
+Qwen2.5 Default: mean=11.11, std=1.41
+Web Retrieved: mean=9.94, std=1.56

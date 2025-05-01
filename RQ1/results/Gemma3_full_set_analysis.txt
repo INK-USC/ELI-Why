@@ -1,0 +1,50 @@
+=== Averages and Standard Deviations ===
+
+--- # Sentences ---
+Gemma3 Graduate School: mean=10.47, std=2.88
+Gemma3 High School: mean=10.00, std=2.89
+Gemma3 Elementary School: mean=6.53, std=1.90
+Gemma3 Default: mean=3.45, std=1.23
+Web Retrieved: mean=2.30, std=0.90
+
+--- Avg Words/Sentence ---
+Gemma3 Graduate School: mean=18.63, std=3.09
+Gemma3 High School: mean=16.96, std=2.66
+Gemma3 Elementary School: mean=16.56, std=3.09
+Gemma3 Default: mean=19.23, std=4.76
+Web Retrieved: mean=17.26, std=6.90
+
+--- Avg Reading Time (s) ---
+Gemma3 Graduate School: mean=18.57, std=4.42
+Gemma3 High School: mean=13.78, std=3.90
+Gemma3 Elementary School: mean=7.43, std=1.93
+Gemma3 Default: mean=5.78, std=1.86
+Web Retrieved: mean=2.93, std=1.04
+
+--- TE Score ---
+Gemma3 Graduate School: mean=0.78, std=0.10
+Gemma3 High School: mean=0.60, std=0.11
+Gemma3 Elementary School: mean=0.39, std=0.09
+Gemma3 Default: mean=0.65, std=0.12
+Web Retrieved: mean=0.44, std=0.12
+
+--- Flesch Reading Ease ---
+Gemma3 Graduate School: mean=12.72, std=15.31
+Gemma3 High School: mean=46.59, std=14.59
+Gemma3 Elementary School: mean=73.12, std=9.59
+Gemma3 Default: mean=24.95, std=19.96
+Web Retrieved: mean=53.35, std=18.52
+
+--- Linsear Write Formula ---
+Gemma3 Graduate School: mean=14.29, std=3.22
+Gemma3 High School: mean=10.38, std=2.69
+Gemma3 Elementary School: mean=8.73, std=2.36
+Gemma3 Default: mean=14.71, std=4.20
+Web Retrieved: mean=11.10, std=5.21
+
+--- Dale-Chall Readability ---
+Gemma3 Graduate School: mean=12.52, std=1.23
+Gemma3 High School: mean=10.02, std=1.26
+Gemma3 Elementary School: mean=7.69, std=0.80
+Gemma3 Default: mean=12.28, std=1.61
+Web Retrieved: mean=9.94, std=1.56
