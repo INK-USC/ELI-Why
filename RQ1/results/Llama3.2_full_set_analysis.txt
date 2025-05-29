@@ -1,3 +1,8 @@
+Llama3.2 Graduate School: Mechanistic = 65.65%, Teleological = 34.35%
+Llama3.2 High School: Mechanistic = 57.81%, Teleological = 42.19%
+Llama3.2 Elementary School: Mechanistic = 55.04%, Teleological = 44.96%
+Llama3.2 Default: Mechanistic = 63.03%, Teleological = 36.97%
+Web Retrieved: Mechanistic = 65.16%, Teleological = 34.83%
 === Averages and Standard Deviations ===
 
 --- # Sentences ---

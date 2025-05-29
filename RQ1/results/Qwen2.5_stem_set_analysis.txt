@@ -1,3 +1,8 @@
+Qwen2.5 Graduate School: Mechanistic = 90.55%, Teleological = 9.45%
+Qwen2.5 High School: Mechanistic = 88.43%, Teleological = 11.57%
+Qwen2.5 Elementary School: Mechanistic = 85.85%, Teleological = 14.15%
+Qwen2.5 Default: Mechanistic = 91.08%, Teleological = 8.92%
+Web Retrieved: Mechanistic = 93.92%, Teleological = 6.08%
 === Averages and Standard Deviations ===
 
 --- # Sentences ---

@@ -1,3 +1,8 @@
+GPT4 Graduate School: Mechanistic = 93.09%, Teleological = 6.91%
+GPT4 High School: Mechanistic = 89.91%, Teleological = 10.09%
+GPT4 Elementary School: Mechanistic = 88.49%, Teleological = 11.51%
+GPT4 Default: Mechanistic = 91.58%, Teleological = 8.42%
+Web Retrieved: Mechanistic = 93.92%, Teleological = 6.08%
 === Averages and Standard Deviations ===
 
 --- # Sentences ---

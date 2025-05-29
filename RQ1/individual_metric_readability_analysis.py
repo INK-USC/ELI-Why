@@ -21,7 +21,8 @@ tqdm.pandas()
 pandarallel.initialize()
 
 # Read in the full dataset from a JSONL file
-data_full = pd.read_json("../ELI_Why_with_rationales.jsonl", lines=True)
+data_full = pd.read_json("integrated_ELI_Why_with_rationales.jsonl", lines=True)
+
 
 # Create indices for STEM/non-STEM filtering
 full_idx = data_full.index
@@ -32,9 +33,16 @@ non_stem_idx = data_full[data_full['Domain'] != 'STEM'].index
 # Main function starts here
 # -------------------------
 def main(model_name: str, set_type: str):
+    test_mode = False
+    if set_type == "test":
+        test_mode = True
+        
     # -- 1. Load target word list and lemmatize--
     # Use the full dataset
     data = data_full.copy()
+    if test_mode:
+        # For testing purposes, limit to 100 rows
+        data = data.head(100)
 
     # Dynamically update roles based on model name.
     # The roles correspond to:
@@ -55,8 +63,11 @@ def main(model_name: str, set_type: str):
     elif set_type == "nonstem":
         filtered_data = data.loc[non_stem_idx, roles]
         run_name = f"{model_name}_nonstem_set"
+    elif set_type == "test":
+        filtered_data = data[roles]
+        run_name = f"{model_name}_TEST_set"
     else:
-        raise ValueError("Set must be one of 'full', 'stem', or 'nonstem'.")
+        raise ValueError("Set must be one of 'full', 'stem', 'nonstem' or 'test'.")
 
     print('#' * 100)
     print('Current run:', run_name)
@@ -102,6 +113,8 @@ def main(model_name: str, set_type: str):
 
     # --- 3a. Generate classification for each row & each role ---
     classification_csv = f"{model_name}_mech_teleo_classification.csv"
+    if set_type == "test":
+        classification_csv = f"{model_name}_TEST_mech_teleo_classification.csv"
     if not os.path.exists(classification_csv):
         classification_df = pd.DataFrame(index=data.index)
         classification_df['Question'] = data['Question']
@@ -113,6 +126,8 @@ def main(model_name: str, set_type: str):
 
         for i in range(len(data)):
             for role in roles:
+                if role == "Web Retrieved":
+                    continue
                 question = data.loc[i, 'Question']
                 explanation = data.loc[i, role]
                 if pd.notna(explanation):
@@ -133,7 +148,22 @@ def main(model_name: str, set_type: str):
         classification_df.to_csv(classification_csv, index=False)
     else:
         classification_df = pd.read_csv(classification_csv)
-
+    
+    # read web_retrieved classification
+    web_retrieved_classification_csv = f"web_retrieved_mech_teleo_classification.csv"
+    if not os.path.exists(web_retrieved_classification_csv):
+        web_retrieved_classification_df = pd.DataFrame(index=data.index)
+        web_retrieved_classification_df['Question'] = data['Question']
+        all_web_explanations = data['Web Retrieved'].dropna().tolist()
+        all_web_labels = [classify_explanation(q, e) for q, e in zip(data['Question'], all_web_explanations)]
+        for label, idx in zip(all_web_labels, data[data['Web Retrieved'].notna()].index):
+            web_retrieved_classification_df.at[idx, 'Web Retrieved'] = label
+        web_retrieved_classification_df.to_csv(web_retrieved_classification_csv, index=False)
+    else:
+        web_retrieved_classification_df = pd.read_csv(web_retrieved_classification_csv)
+    
+    # Merge web retrieved classification into the main classification_df
+    classification_df = pd.merge(classification_df, web_retrieved_classification_df, on='Question', how='left')
     classification_df = classification_df.mask(filter_condition)
     if set_type == "nonstem":
         classification_df = classification_df.loc[non_stem_idx]
@@ -144,20 +174,22 @@ def main(model_name: str, set_type: str):
     mech_count = {}
     tele_count = {}
     total_count = {}
-    for role in [grad_role, high_role, elem_role]:
+    for role in roles:
         role_values = classification_df[role].dropna()
         mech_count[role] = (role_values == "Mechanistic").sum()
         tele_count[role] = (role_values == "Teleological").sum()
         total_count[role] = len(role_values)
 
+    analysis_report = []
     print("\n=== Overall Classification Percentages ===")
-    for role in [grad_role, high_role, elem_role]:
+    for role in roles:
         if total_count[role] == 0:
             print(f"{role}: No data")
         else:
             mech_pct = mech_count[role] / total_count[role] * 100
             tele_pct = tele_count[role] / total_count[role] * 100
             print(f"{role}: Mechanistic = {mech_pct:.2f}%, Teleological = {tele_pct:.2f}%")
+            analysis_report.append(f"{role}: Mechanistic = {mech_pct:.2f}%, Teleological = {tele_pct:.2f}%")
 
     # -- 4. Statistical test: Pairwise one-tailed proportion tests --
     print("\n=== Pairwise One-Tailed Proportion Tests (Mechanistic) ===")
@@ -193,7 +225,6 @@ def main(model_name: str, set_type: str):
         "Dale-Chall Readability": dale_chall_scores
     }
 
-    analysis_report = []
     analysis_report.append("=== Averages and Standard Deviations ===")
     for metric_name, df in metrics_dataframes.items():
         analysis_report.append(f"\n--- {metric_name} ---")
@@ -252,8 +283,9 @@ def main(model_name: str, set_type: str):
     plt.tight_layout()
     # Save the figure before showing
     os.makedirs("plots", exist_ok=True)
-    plt.savefig(f"plots/{run_name}_readability_plots.png")
-    print(f"Plots saved to plots/{run_name}_readability_plots.png")
+    fig_save_path = os.path.join("plots", f"{run_name}_readability_plots.png")
+    plt.savefig(fig_save_path)
+    print(f"Plots saved to {fig_save_path}")
 
     # -- 7. Run KS tests for all metrics --
     for metric_name, df in metrics_dataframes.items():
@@ -261,16 +293,16 @@ def main(model_name: str, set_type: str):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run analysis with model name and set type")
-    parser.add_argument("--model", type=str, choices=["GPT4o", "Llama3.2"],
-                        help="Choose the model: GPT4o or Llama3.2")
-    parser.add_argument("--set", type=str, choices=["full", "stem", "nonstem"],
-                        help="Choose the set: full, stem, or nonstem")
+    parser.add_argument("--model", type=str, choices=["GPT4", "Llama3.2", "Qwen2.5", "R1_Distilled_Llama"],
+                        help="Choose the model: GPT4, Llama3.2, Qwen2.5, or R1_Distilled_Llama")
+    parser.add_argument("--set", type=str, choices=["full", "stem", "nonstem", "test"],
+                        help="Choose the set: full, stem, nonstem, or test(header for testing purposes)")
     parser.add_argument("--all", action="store_true",
                         help="Run analysis for all combinations of model and set types")
     args = parser.parse_args()
     
     if args.all:
-        models = ["GPT4o", "Llama3.2"]
+        models = ["GPT4", "Llama3.2", "Qwen2.5", "R1_Distilled_Llama"]
         set_types = ["full", "stem", "nonstem"]
         for model in models:
             for set_type in set_types:
