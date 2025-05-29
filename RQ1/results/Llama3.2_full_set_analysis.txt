@@ -1,55 +1,55 @@
-Llama3.2 Graduate School: Mechanistic = 65.65%, Teleological = 34.35%
-Llama3.2 High School: Mechanistic = 57.81%, Teleological = 42.19%
 Llama3.2 Elementary School: Mechanistic = 55.04%, Teleological = 44.96%
+Llama3.2 High School: Mechanistic = 57.81%, Teleological = 42.19%
+Llama3.2 Graduate School: Mechanistic = 65.65%, Teleological = 34.35%
 Llama3.2 Default: Mechanistic = 63.03%, Teleological = 36.97%
 Web Retrieved: Mechanistic = 65.16%, Teleological = 34.83%
 === Averages and Standard Deviations ===
 
 --- # Sentences ---
-Llama3.2 Graduate School: mean=9.10, std=3.33
-Llama3.2 High School: mean=6.70, std=2.97
 Llama3.2 Elementary School: mean=3.29, std=1.63
+Llama3.2 High School: mean=6.70, std=2.97
+Llama3.2 Graduate School: mean=9.10, std=3.33
 Llama3.2 Default: mean=4.24, std=2.63
 Web Retrieved: mean=2.30, std=0.90
 
 --- Avg Words/Sentence ---
-Llama3.2 Graduate School: mean=23.12, std=3.69
-Llama3.2 High School: mean=21.30, std=3.81
 Llama3.2 Elementary School: mean=20.39, std=5.10
+Llama3.2 High School: mean=21.30, std=3.81
+Llama3.2 Graduate School: mean=23.12, std=3.69
 Llama3.2 Default: mean=23.74, std=4.88
 Web Retrieved: mean=17.26, std=6.90
 
 --- Avg Reading Time (s) ---
-Llama3.2 Graduate School: mean=17.05, std=6.30
-Llama3.2 High School: mean=10.97, std=5.00
 Llama3.2 Elementary School: mean=4.61, std=2.14
+Llama3.2 High School: mean=10.97, std=5.00
+Llama3.2 Graduate School: mean=17.05, std=6.30
 Llama3.2 Default: mean=7.93, std=4.71
 Web Retrieved: mean=2.93, std=1.04
 
 --- TE Score ---
-Llama3.2 Graduate School: mean=0.54, std=0.10
-Llama3.2 High School: mean=0.47, std=0.09
 Llama3.2 Elementary School: mean=0.37, std=0.11
+Llama3.2 High School: mean=0.47, std=0.09
+Llama3.2 Graduate School: mean=0.54, std=0.10
 Llama3.2 Default: mean=0.53, std=0.11
 Web Retrieved: mean=0.44, std=0.12
 
 --- Flesch Reading Ease ---
-Llama3.2 Graduate School: mean=34.56, std=14.51
-Llama3.2 High School: mean=46.39, std=15.11
 Llama3.2 Elementary School: mean=60.91, std=17.14
+Llama3.2 High School: mean=46.39, std=15.11
+Llama3.2 Graduate School: mean=34.56, std=14.51
 Llama3.2 Default: mean=33.68, std=16.87
 Web Retrieved: mean=53.35, std=18.52
 
 --- Linsear Write Formula ---
-Llama3.2 Graduate School: mean=14.88, std=2.93
-Llama3.2 High School: mean=13.23, std=3.09
 Llama3.2 Elementary School: mean=12.29, std=3.94
+Llama3.2 High School: mean=13.23, std=3.09
+Llama3.2 Graduate School: mean=14.88, std=2.93
 Llama3.2 Default: mean=16.43, std=3.93
 Web Retrieved: mean=11.10, std=5.21
 
 --- Dale-Chall Readability ---
-Llama3.2 Graduate School: mean=9.88, std=1.13
-Llama3.2 High School: mean=9.49, std=1.19
 Llama3.2 Elementary School: mean=8.73, std=1.47
+Llama3.2 High School: mean=9.49, std=1.19
+Llama3.2 Graduate School: mean=9.88, std=1.13
 Llama3.2 Default: mean=10.80, std=1.38
 Web Retrieved: mean=9.94, std=1.56

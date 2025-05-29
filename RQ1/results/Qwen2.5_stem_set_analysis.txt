@@ -1,55 +1,55 @@
-Qwen2.5 Graduate School: Mechanistic = 90.55%, Teleological = 9.45%
-Qwen2.5 High School: Mechanistic = 88.43%, Teleological = 11.57%
 Qwen2.5 Elementary School: Mechanistic = 85.85%, Teleological = 14.15%
+Qwen2.5 High School: Mechanistic = 88.43%, Teleological = 11.57%
+Qwen2.5 Graduate School: Mechanistic = 90.55%, Teleological = 9.45%
 Qwen2.5 Default: Mechanistic = 91.08%, Teleological = 8.92%
 Web Retrieved: Mechanistic = 93.92%, Teleological = 6.08%
 === Averages and Standard Deviations ===
 
 --- # Sentences ---
-Qwen2.5 Graduate School: mean=4.47, std=1.22
-Qwen2.5 High School: mean=3.84, std=1.00
 Qwen2.5 Elementary School: mean=3.44, std=0.94
+Qwen2.5 High School: mean=3.84, std=1.00
+Qwen2.5 Graduate School: mean=4.47, std=1.22
 Qwen2.5 Default: mean=3.02, std=0.90
 Web Retrieved: mean=2.52, std=0.86
 
 --- Avg Words/Sentence ---
-Qwen2.5 Graduate School: mean=22.40, std=4.01
-Qwen2.5 High School: mean=20.29, std=3.95
 Qwen2.5 Elementary School: mean=18.84, std=4.01
+Qwen2.5 High School: mean=20.29, std=3.95
+Qwen2.5 Graduate School: mean=22.40, std=4.01
 Qwen2.5 Default: mean=22.07, std=4.63
 Web Retrieved: mean=17.86, std=5.96
 
 --- Avg Reading Time (s) ---
-Qwen2.5 Graduate School: mean=7.86, std=2.05
-Qwen2.5 High School: mean=5.84, std=1.47
 Qwen2.5 Elementary School: mean=4.60, std=1.24
+Qwen2.5 High School: mean=5.84, std=1.47
+Qwen2.5 Graduate School: mean=7.86, std=2.05
 Qwen2.5 Default: mean=5.14, std=1.47
 Web Retrieved: mean=3.12, std=0.79
 
 --- TE Score ---
-Qwen2.5 Graduate School: mean=0.50, std=0.10
-Qwen2.5 High School: mean=0.45, std=0.10
 Qwen2.5 Elementary School: mean=0.39, std=0.09
+Qwen2.5 High School: mean=0.45, std=0.10
+Qwen2.5 Graduate School: mean=0.50, std=0.10
 Qwen2.5 Default: mean=0.48, std=0.10
 Web Retrieved: mean=0.44, std=0.12
 
 --- Flesch Reading Ease ---
-Qwen2.5 Graduate School: mean=39.74, std=15.67
-Qwen2.5 High School: mean=50.72, std=15.35
 Qwen2.5 Elementary School: mean=61.74, std=14.83
+Qwen2.5 High School: mean=50.72, std=15.35
+Qwen2.5 Graduate School: mean=39.74, std=15.67
 Qwen2.5 Default: mean=42.55, std=16.84
 Web Retrieved: mean=57.61, std=17.38
 
 --- Linsear Write Formula ---
-Qwen2.5 Graduate School: mean=15.03, std=3.12
-Qwen2.5 High School: mean=13.17, std=3.21
 Qwen2.5 Elementary School: mean=11.39, std=3.25
+Qwen2.5 High School: mean=13.17, std=3.21
+Qwen2.5 Graduate School: mean=15.03, std=3.12
 Qwen2.5 Default: mean=15.05, std=3.69
 Web Retrieved: mean=11.13, std=4.50
 
 --- Dale-Chall Readability ---
-Qwen2.5 Graduate School: mean=10.23, std=1.25
-Qwen2.5 High School: mean=9.65, std=1.24
 Qwen2.5 Elementary School: mean=8.78, std=1.20
+Qwen2.5 High School: mean=9.65, std=1.24
+Qwen2.5 Graduate School: mean=10.23, std=1.25
 Qwen2.5 Default: mean=10.39, std=1.35
 Web Retrieved: mean=9.54, std=1.52

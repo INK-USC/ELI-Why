@@ -1,55 +1,55 @@
-R1_Distilled_Llama Graduate School: Mechanistic = 34.27%, Teleological = 65.73%
-R1_Distilled_Llama High School: Mechanistic = 31.38%, Teleological = 68.62%
 R1_Distilled_Llama Elementary School: Mechanistic = 32.18%, Teleological = 67.82%
+R1_Distilled_Llama High School: Mechanistic = 31.38%, Teleological = 68.62%
+R1_Distilled_Llama Graduate School: Mechanistic = 34.27%, Teleological = 65.73%
 R1_Distilled_Llama Default: Mechanistic = 31.63%, Teleological = 68.37%
 Web Retrieved: Mechanistic = 39.92%, Teleological = 60.06%
 === Averages and Standard Deviations ===
 
 --- # Sentences ---
-R1_Distilled_Llama Graduate School: mean=7.77, std=3.50
-R1_Distilled_Llama High School: mean=6.06, std=3.27
 R1_Distilled_Llama Elementary School: mean=5.00, std=3.07
+R1_Distilled_Llama High School: mean=6.06, std=3.27
+R1_Distilled_Llama Graduate School: mean=7.77, std=3.50
 R1_Distilled_Llama Default: mean=5.53, std=3.44
 Web Retrieved: mean=2.12, std=0.88
 
 --- Avg Words/Sentence ---
-R1_Distilled_Llama Graduate School: mean=19.94, std=3.59
-R1_Distilled_Llama High School: mean=19.91, std=4.02
 R1_Distilled_Llama Elementary School: mean=20.27, std=4.48
+R1_Distilled_Llama High School: mean=19.91, std=4.02
+R1_Distilled_Llama Graduate School: mean=19.94, std=3.59
 R1_Distilled_Llama Default: mean=20.46, std=4.47
 Web Retrieved: mean=16.72, std=7.60
 
 --- Avg Reading Time (s) ---
-R1_Distilled_Llama Graduate School: mean=13.79, std=6.42
-R1_Distilled_Llama High School: mean=10.31, std=5.63
 R1_Distilled_Llama Elementary School: mean=8.50, std=5.15
+R1_Distilled_Llama High School: mean=10.31, std=5.63
+R1_Distilled_Llama Graduate School: mean=13.79, std=6.42
 R1_Distilled_Llama Default: mean=9.65, std=5.94
 Web Retrieved: mean=2.77, std=1.20
 
 --- TE Score ---
-R1_Distilled_Llama Graduate School: mean=0.73, std=0.14
-R1_Distilled_Llama High School: mean=0.65, std=0.14
 R1_Distilled_Llama Elementary School: mean=0.63, std=0.14
+R1_Distilled_Llama High School: mean=0.65, std=0.14
+R1_Distilled_Llama Graduate School: mean=0.73, std=0.14
 R1_Distilled_Llama Default: mean=0.67, std=0.14
 Web Retrieved: mean=0.44, std=0.12
 
 --- Flesch Reading Ease ---
-R1_Distilled_Llama Graduate School: mean=24.69, std=11.44
-R1_Distilled_Llama High School: mean=28.26, std=12.45
 R1_Distilled_Llama Elementary School: mean=27.65, std=13.55
+R1_Distilled_Llama High School: mean=28.26, std=12.45
+R1_Distilled_Llama Graduate School: mean=24.69, std=11.44
 R1_Distilled_Llama Default: mean=24.27, std=13.51
 Web Retrieved: mean=49.61, std=18.69
 
 --- Linsear Write Formula ---
-R1_Distilled_Llama Graduate School: mean=14.48, std=3.09
-R1_Distilled_Llama High School: mean=14.46, std=3.38
 R1_Distilled_Llama Elementary School: mean=14.97, std=3.68
+R1_Distilled_Llama High School: mean=14.46, std=3.38
+R1_Distilled_Llama Graduate School: mean=14.48, std=3.09
 R1_Distilled_Llama Default: mean=15.36, std=3.86
 Web Retrieved: mean=11.07, std=5.76
 
 --- Dale-Chall Readability ---
-R1_Distilled_Llama Graduate School: mean=11.62, std=0.93
-R1_Distilled_Llama High School: mean=11.50, std=1.03
 R1_Distilled_Llama Elementary School: mean=11.63, std=1.14
+R1_Distilled_Llama High School: mean=11.50, std=1.03
+R1_Distilled_Llama Graduate School: mean=11.62, std=0.93
 R1_Distilled_Llama Default: mean=11.90, std=1.12
 Web Retrieved: mean=10.29, std=1.50

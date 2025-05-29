@@ -46,10 +46,9 @@ def main(model_name: str, set_type: str):
 
     # Dynamically update roles based on model name.
     # The roles correspond to:
-    #   [Graduate School, High School, Elementary School, Default, Web Retrieved]
-    roles = [f"{model_name} Graduate School",
+    roles = [f"{model_name} Elementary School",
              f"{model_name} High School",
-             f"{model_name} Elementary School",
+             f"{model_name} Graduate School",
              f"{model_name} Default",
              "Web Retrieved"]
 
@@ -257,7 +256,7 @@ def main(model_name: str, set_type: str):
         (dale_chall_scores, "Dale-Chall Readability")
     ]
 
-    colors = ["tab:orange", "tab:green", "tab:blue", "#505050", "goldenrod"]
+    colors = ["tab:blue", "tab:green", "tab:orange", "#505050", "goldenrod"]
 
     for i, (df, title) in enumerate(plots_info):
         for role, c in zip(roles, colors):
@@ -269,16 +268,16 @@ def main(model_name: str, set_type: str):
         axs[i].set_ylabel("Density" if i % 2 == 0 else "")
         axs[i].legend(loc='upper right')
 
-    mech_ratio, mech_low, mech_up = compute_prop_and_ci(classification_df, [grad_role, high_role, elem_role], "Mechanistic")
+    mech_ratio, mech_low, mech_up = compute_prop_and_ci(classification_df, roles, "Mechanistic")
     mech_err = np.array([
         [mech_ratio[i] - mech_low[i] for i in range(len(mech_ratio))],
         [mech_up[i] - mech_ratio[i] for i in range(len(mech_ratio))]
     ])
-    axs[7].bar([grad_role, high_role, elem_role], mech_ratio, yerr=mech_err, color=colors[:3], capsize=5)
+    axs[7].bar(roles, mech_ratio, yerr=mech_err, color=colors, capsize=5)
     axs[7].set_title("% Mechanistic per Role")
     axs[7].set_ylabel("% Mechanistic")
-    axs[7].set_xticks([0, 1, 2])
-    axs[7].set_xticklabels([grad_role, high_role, elem_role], rotation=20)
+    axs[7].set_xticks([0, 1, 2, 3, 4])
+    axs[7].set_xticklabels(roles, rotation=20)
 
     plt.tight_layout()
     # Save the figure before showing
